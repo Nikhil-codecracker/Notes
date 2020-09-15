@@ -1,0 +1,169 @@
+
+
+#newnote{
+    position:relative;
+    top:5rem;
+    margin:auto;
+    height:30rem;
+    width:27rem;
+    border-radius:1rem;
+    box-shadow: 5px 5px 10px rgb(168, 168, 168);
+}
+#heading{
+    width:100%;
+    height: 4rem;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius:1rem 1rem 0 0;
+}
+
+#new{
+    float:left;
+    border-bottom:solid 1px black;
+    border-right:solid 1px black;
+    width:50%;
+    height:100%;
+    margin:0;
+    padding:0;
+    text-align:center; 
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:1.5rem;
+    color:white;
+    font-weight:bold;
+    background-color: #FF464E;
+    border-radius:1rem 0 0 0;
+}
+#allnotes{
+    float:left;
+    border-bottom:solid 1px black;
+    border-left:solid 1px black;
+    width:50%;
+    font-size:1.5rem;
+    color:white;
+    height:100%;
+    margin:0;
+    padding:0;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-weight:bold;
+    background-color: #FF464E;
+    border-radius:0 1rem 0 0;
+}
+#note #desc{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#desc{
+    margin: 1rem 2rem;
+    width: 23rem;
+}
+#title{
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+#full{
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+#Text{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#textArea{
+    display: block;
+    width: 100%;
+    height: 12rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#addnewnote{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#b{
+    display: inline-block;
+    font-weight: 400;
+    color:white;
+    width:8rem;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .35rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #28A745;
+}
+
+#notes{
+    display:none;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+    height: 25rem;
+}
+
+.noteadded{
+    margin: 1rem 2rem 0.5rem 2rem;
+    width: 23rem;
+    height:2rem;
+    border-radius: 0.5rem;
+    background-color: #FF464E;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Title{
+    font-size: 1.4rem;
+    margin: 0.5rem 0.75rem;
+    color:white;
+}
+.description{
+    display: none;
+    width: 21.5rem;
+    margin: 0.3rem 2rem 1rem 2rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    border: solid 1px black;
+}
+.desctext{
+    color: black;
+    font-size: 1rem;
+    margin: 0.5rem 0.75rem;
+}
+.noteadded:hover + .description{
+    display:block;
+}

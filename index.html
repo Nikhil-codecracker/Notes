@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Notes</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <div id="newnote">
+            <div id="heading">
+                <div id="new">New Note</div>
+                <div id="allnotes">Notes</div>
+            </div>
+            <div id="note">
+                <div id="desc">
+                    <span id="title">Heading</span>
+                    <input type="text" placeholder="Title" id="Text">
+                    <span id="full">Description</span>
+                    <textarea id="textArea"></textarea>
+                </div>
+                <div id="addnewnote">
+                    <button id="b">Add</button>
+                </div>
+            </div>
+            <div id="notes">
+                <div class="noteadded">
+                    <span class="Title">
+                        Random text
+                    </span>
+                </div>
+                <div class="description">
+                   <span class="desctext"> Some description of the note </span>
+                </div>
+            </div>
+        </div>
+        <script>
+            
+            console.log("123");
+            document.getElementById("new").onclick = function(){
+                document.getElementById("note").style.display = "flex";
+                document.getElementById("note").style.justifyContent = "center";
+                document.getElementById("note").style.alignItems = "center";
+                document.getElementById("note").style.flexDirection = "column";
+                document.getElementById("notes").style.display = "none";
+                console.log("1");
+            }
+            document.getElementById("allnotes").onclick = function(){
+                document.getElementById("notes").style.display = "block";
+                document.getElementById("note").style.display = "none";
+                console.log("2");
+            }
+            document.getElementById("b").onclick = function(){
+                document.getElementById("notes").innerHTML = document.getElementById("notes").innerHTML + "<div class='noteadded'><span class='Title'>" +document.getElementById("Text").value + "</span></div><div class='description'><span class='desctext'>"+document.getElementById("textArea").value + "</span></div>"
+                document.getElementById("Text").value = " ";
+                document.getElementById("textArea").value = " ";
+                
+            }
+        </script>
+    </body>
+</html>
