@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
         <div id="newnote">
@@ -18,23 +19,26 @@
                     <span id="full">Description</span>
                     <textarea id="textArea"></textarea>
                 </div>
-                <div id="addnewnote">
-                    <button id="b">Add</button>
+                <div class="addnewnote">
+                    <button class="btn" id="b">Add</button>
                 </div>
             </div>
             <div id="notes">
-                <div class="noteadded">
+                <div class="noteadded" >
                     <span class="Title">
-                        Random text
+                        Title
                     </span>
                 </div>
-                <div class="description">
+                <div class="description" >
                    <span class="desctext"> Some description of the note </span>
                 </div>
             </div>
+            <div class="addnewnote" id="m">
+                <button class="btn" id="b2">Clear</button>
+            </div>
+
         </div>
         <script>
-            
             console.log("123");
             document.getElementById("new").onclick = function(){
                 document.getElementById("note").style.display = "flex";
@@ -46,6 +50,7 @@
             }
             document.getElementById("allnotes").onclick = function(){
                 document.getElementById("notes").style.display = "block";
+                document.getElementById("m").style.display = "flex";
                 document.getElementById("note").style.display = "none";
                 console.log("2");
             }
@@ -53,7 +58,13 @@
                 document.getElementById("notes").innerHTML = document.getElementById("notes").innerHTML + "<div class='noteadded'><span class='Title'>" +document.getElementById("Text").value + "</span></div><div class='description'><span class='desctext'>"+document.getElementById("textArea").value + "</span></div>"
                 document.getElementById("Text").value = " ";
                 document.getElementById("textArea").value = " ";
-                
+            }
+            document.getElementById("b2").onclick = function(){
+                var a = document.getElementsByClassName("noteadded")
+                for(var i=0;i<a.length;i++){
+                    document.getElementsByClassName("noteadded")[i].style.display = "none";
+                document.getElementsByClassName("description")[i].style.display = "none";
+                }
             }
         </script>
     </body>
