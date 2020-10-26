@@ -9,8 +9,8 @@
     <body>
         <div id="newnote">
             <div id="heading">
-                <div id="new">New Note</div>
-                <div id="allnotes">Notes</div>
+                <div id="new" style="cursor: pointer;">New Note</div>
+                <div id="allnotes" style="cursor: pointer;">Notes</div>
             </div>
             <div id="note">
                 <div id="desc">
@@ -28,6 +28,7 @@
                     <span class="Title">
                         Title
                     </span>
+                    <i class="fa fa-trash delete"></i>
                 </div>
                 <div class="description" >
                    <span class="desctext"> Some description of the note </span>
@@ -46,6 +47,7 @@
                 document.getElementById("note").style.alignItems = "center";
                 document.getElementById("note").style.flexDirection = "column";
                 document.getElementById("notes").style.display = "none";
+                document.getElementById("m").style.display = "none";
                 console.log("1");
             }
             document.getElementById("allnotes").onclick = function(){
@@ -55,7 +57,7 @@
                 console.log("2");
             }
             document.getElementById("b").onclick = function(){
-                document.getElementById("notes").innerHTML = document.getElementById("notes").innerHTML + "<div class='noteadded'><span class='Title'>" +document.getElementById("Text").value + "</span></div><div class='description'><span class='desctext'>"+document.getElementById("textArea").value + "</span></div>"
+                document.getElementById("notes").innerHTML = document.getElementById("notes").innerHTML + "<div class='noteadded'><span class='Title'>" +document.getElementById("Text").value + "</span><i class='fa fa-trash delete'></i></div><div class='description'><span class='desctext'>"+document.getElementById("textArea").value + "</span></div>"
                 document.getElementById("Text").value = " ";
                 document.getElementById("textArea").value = " ";
             }
@@ -63,9 +65,18 @@
                 var a = document.getElementsByClassName("noteadded")
                 for(var i=0;i<a.length;i++){
                     document.getElementsByClassName("noteadded")[i].style.display = "none";
-                document.getElementsByClassName("description")[i].style.display = "none";
+                    document.getElementsByClassName("description")[i].style.display = "none";
                 }
             }
+            setInterval(()=>{
+                var b = document.getElementsByClassName("delete");
+                for(var i=0;i<b.length;i++){
+                    console.log(b[i],i)
+                    b[i].onclick = function(){
+                        console.log(b[i],i)
+                    }
+                }
+            },1000)
         </script>
     </body>
 </html>

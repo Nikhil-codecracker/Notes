@@ -175,3 +175,10 @@
 #m{
     display:none;
 }
+
+.delete{
+    position:relative;
+    float:right;
+    margin-top: 0.4rem;
+    left: -1rem;
+}
